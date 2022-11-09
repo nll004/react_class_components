@@ -4,13 +4,11 @@ import "./Joke.css";
 class Joke extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.upVote = this.upVote.bind(this);
     this.downVote = this.downVote.bind(this);
   }
 
   upVote = () => {
-    console.log('upvote')
     this.props.vote(this.props.id, +1)};
 
   downVote = () => this.props.vote(this.props.id, -1);
